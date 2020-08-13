@@ -62,7 +62,8 @@ html {
 
 .container {
   margin: 0 auto ;
-  padding: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   width: 1200px;
 }
 
@@ -86,6 +87,10 @@ nav .list {
 
 /* sait-nav */
 .logo {
+  width: 145px;
+  height: 30px;
+  margin-right: 85px;
+
   color: var(--secondary-link-color);
 
   font-family: Raleway, sans-serif;
@@ -112,12 +117,23 @@ nav .list {
   letter-spacing: 0.02em;
 }
 
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link:hover,
 .site-nav .link:focus,
 .site-nav .link.current {
   color: var(--secondary-link-color);
 }
 
+.auth-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.container .auth-nav {
+  margin-left: auto;
+}
 .auth-nav .link {
   color: var(--primaty-link-color);
 
@@ -135,6 +151,8 @@ nav .list {
 
 /* hero */
 .hero {
+  /* тимчасовий фон */
+  background-color: var(--footer-bg-color);
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -152,6 +170,10 @@ nav .list {
 }
 
 .hero .button{
+  display: inline-block;
+  
+
+  min-width: 200px;
   padding-top: 10px;
   padding-right: 22px;
   padding-bottom: 10px;
@@ -173,6 +195,12 @@ nav .list {
 }
 
 /* Наши плюсы */
+.wepros .benefits {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+
 .benefits .title {
   font-weight: 700;
   font-size: 14px;
@@ -197,6 +225,15 @@ nav .list {
 }
 
 /* Чем мы занимаемся */
+.wedo .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wedo-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .title-secondary {
   margin-bottom: 10px;
 
@@ -214,13 +251,22 @@ nav .list {
 .ourteam {
   background: var(--secondary-background-color);
 }
+
+.ourteam .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ourteam-container .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .title-primery {
   color: var(--title-text-color);
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18x;
-  text-align: center;
 }
 
 .ourteam .text {
@@ -230,6 +276,36 @@ nav .list {
 }
 
 /* Галерея Портфолио */
+.gallery .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+.gallery-button {
+  margin-bottom: 50px;
+  align-self: center;
+}
+
+.gallery-work {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-button .item:not(:last-child) {
+  margin-right: 8px;
+}
+.gallery-work .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.gallery-work .item:not(:nth-last-child(-3n+3)) {
+  margin-bottom: 30px;
+}
+.container .gallery-button {
+  justify-content: center;
+}
+  
 .gallery .button {
   padding-top: 6px;
   padding-right: 22px;
@@ -255,10 +331,13 @@ nav .list {
 }
 
 .gallery .title-primery {
+  display: block;
+  
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  text-align: left;
 }
 
 .gallery .text {
@@ -282,6 +361,18 @@ nav .list {
   font-size: 14px;
   line-height: 1.71px;
 }
+
+/* .footer .logo {
+  margin-bottom: 20px;
+}
+
+.container .text{
+  margin-bottom: 9px;
+}
+
+.container .address-link.item:not(:last-child) {
+  margin-bottom: 9px;
+} */
 
 .address-link {
   color: var(--footer-secondary-text-colo);
