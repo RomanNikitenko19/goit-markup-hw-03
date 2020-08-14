@@ -10,6 +10,7 @@
 /* цвет кнопки #2196F3 */
 
 :root {
+  --title-color: #212121;
   --title-text-color: #212121;
   --primaty-text-color: #757575;
   --primaty-link-color: #212121;
@@ -61,7 +62,7 @@ html {
 }
 
 .container {
-  margin: 0 auto ;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
   width: 1200px;
@@ -71,6 +72,7 @@ html {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 /* Шапка */
 .page-header {
   padding-top: 24px;
@@ -79,10 +81,15 @@ html {
 
 nav {
   display: flex;
+  align-items: center;
 }
 
 nav .list {
   display: flex;
+}
+
+.nomarging-bottom {
+  padding: 0;
 }
 
 /* sait-nav */
@@ -109,7 +116,7 @@ nav .list {
 }
 
 .site-nav .link {
-    color: var(--primaty-link-color);
+  color: var(--primaty-link-color);
 
   font-weight: 500;
   font-size: 14px;
@@ -155,6 +162,8 @@ nav .list {
   background-color: var(--footer-bg-color);
   padding-top: 200px;
   padding-bottom: 200px;
+
+  text-align: center;
 }
 
 .hero-title {
@@ -169,16 +178,15 @@ nav .list {
   text-transform: uppercase;
 }
 
-.hero .button{
+.hero .button {
   display: inline-block;
-  
-
   min-width: 200px;
   padding-top: 10px;
   padding-right: 22px;
   padding-bottom: 10px;
   padding-left: 22px;
-  margin-bottom: 200px;
+
+  border-radius: 4px;
 }
 
 .button {
@@ -192,32 +200,40 @@ nav .list {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+
+  border-radius: 4px;
 }
 
 /* Наши плюсы */
-.wepros .benefits {
+.container .benefits {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
 }
 
+.benefits .item {
+  width: 270px;
+}
+
+.benefits .list:not(:last-child) {
+  margin-right: 30px;
+}
 
 .benefits .title {
+  margin-bottom: 10px;
+
+  color: var(--title-color);
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14x;
+  line-height: 1.14;
   text-transform: uppercase;
-}
 
-.benefits .text {
-  font-size: 14px;
-  line-height: 1.17px;
 }
 
 /* H2 */
 .section-title {
   margin-bottom: 50px;
-  color: var(--title-text-);
 
+  color: var(--title-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -237,7 +253,7 @@ nav .list {
 .title-secondary {
   margin-bottom: 10px;
 
-  color: var(--secondary-title-color);
+  color: var(--title-color:);
   background: var(--bg-secondary-title);
 
   font-weight: 700;
@@ -255,6 +271,11 @@ nav .list {
 .ourteam .list {
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.ourteam .item {
+  background-color: var( --primary-background-color);
 }
 
 .ourteam-container .item:not(:last-child) {
@@ -266,12 +287,13 @@ nav .list {
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.18x;
+  line-height: 1.18;
+  text-align: center;
 }
 
 .ourteam .text {
   font-size: 16px;
-  line-height: 1.18px;
+  line-height: 1.18;
   text-align: center;
 }
 
@@ -280,8 +302,6 @@ nav .list {
   display: flex;
   flex-wrap: wrap;
 }
-
-
 
 .gallery-button {
   margin-bottom: 50px;
@@ -293,20 +313,27 @@ nav .list {
   flex-wrap: wrap;
 }
 
+.gallery-work .item {
+  background-color: var(--primary-background-color);
+}
+
 .gallery-button .item:not(:last-child) {
   margin-right: 8px;
 }
 .gallery-work .item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
-.gallery-work .item:not(:nth-last-child(-3n+3)) {
+.gallery-work .item:not(:nth-last-child(-3n + 3)) {
   margin-bottom: 30px;
 }
 .container .gallery-button {
   justify-content: center;
 }
-  
+
 .gallery .button {
+  margin-bottom: 50px;
+  border-radius: 4px;
+
   padding-top: 6px;
   padding-right: 22px;
   padding-bottom: 6px;
@@ -320,7 +347,7 @@ nav .list {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-
+  border: 0;
 }
 
 .gallery .button:hover:hover,
@@ -328,11 +355,10 @@ nav .list {
   color: var(--prime-button-title);
   background-color: var(--bg-button-color);
 
+  border: 0;
 }
 
 .gallery .title-primery {
-  display: block;
-  
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -357,14 +383,17 @@ nav .list {
 }
 
 .footer .text {
+  font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71px;
 }
 
-/* .footer .logo {
+.footer .logo {
   margin-bottom: 20px;
-}
+
+  display: inline-block;
+} 
 
 .container .text{
   margin-bottom: 9px;
@@ -372,7 +401,7 @@ nav .list {
 
 .container .address-link.item:not(:last-child) {
   margin-bottom: 9px;
-} */
+} 
 
 .address-link {
   color: var(--footer-secondary-text-colo);
