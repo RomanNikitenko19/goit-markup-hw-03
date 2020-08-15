@@ -368,7 +368,7 @@ a {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  border: 0;
+  border: none;
 }
 
 .gallery .button:hover:hover,
@@ -376,7 +376,7 @@ a {
   color: var(--prime-button-title);
   background-color: var(--bg-button-color);
 
-  border: 0;
+  border: none;
 }
 
 .gallery-card-content {
@@ -401,6 +401,7 @@ a {
 .gallery .text {
   font-size: 16px;
   line-height: 1.87;
+  color: var( --primaty-text-color);
 }
 
 /*Футер*/
