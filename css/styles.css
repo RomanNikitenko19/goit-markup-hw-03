@@ -88,6 +88,16 @@ nav .list {
   display: flex;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
 .nomarging-bottom {
   padding: 0;
 }
@@ -253,7 +263,7 @@ nav .list {
 .title-secondary {
   margin-bottom: 10px;
 
-  color: var(--title-color:);
+  color: var(--title-color);
   background: var(--bg-secondary-title);
 
   font-weight: 700;
@@ -280,6 +290,17 @@ nav .list {
 
 .ourteam-container .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.ourteam-content {
+  padding-top: 30px;
+  padding-right: 60px;
+  padding-bottom: 30px;
+  padding-left: 60px;
+}
+
+.ourteam-title-padding {
+  padding-bottom: 10px;
 }
 
 .title-primery {
@@ -358,6 +379,17 @@ nav .list {
   border: 0;
 }
 
+.gallery-card-content {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+}
+
+.gallery-title-padding {
+  padding-bottom: 10px;
+}
+
 .gallery .title-primery {
   font-weight: 700;
   font-size: 18px;
@@ -391,15 +423,9 @@ nav .list {
 
 .footer .logo {
   margin-bottom: 20px;
-
-  display: inline-block;
 } 
 
-.container .text{
-  margin-bottom: 9px;
-}
-
-.container .address-link.item:not(:last-child) {
+.container .text:not(:last-child) {
   margin-bottom: 9px;
 } 
 
