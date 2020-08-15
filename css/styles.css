@@ -415,7 +415,11 @@ a {
   font-weight: 700;
 }
 
-.footer .text {
+.first-container-footer {
+  min-width: 232px;
+}
+
+.footer-address {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -426,7 +430,7 @@ a {
   margin-bottom: 20px;
 } 
 
-.container .text:not(:last-child) {
+.first-container-footer .item:not(:last-child) {
   margin-bottom: 9px;
 } 
 
