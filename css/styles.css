@@ -24,6 +24,7 @@
   --footer-bg-color: #2f303a;
   --footer-text-color: #ffffff;
   --footer-secondary-text-color: rgba(255, 255, 255, 0.6);
+  --prime-border-color: #afb1b8;
 }
 
 html {
@@ -94,12 +95,25 @@ img {
   height: auto;
 }
 
-a {
-  text-decoration: none;
-}
-
 .nomarging-bottom {
   padding: 0;
+}
+
+.list-socialnetworks {
+  display: flex;
+  width: 206px;
+}
+
+.list-socialnetworks .item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: rgb(0, 255, 128);
+}
+
+.list-socialnetworks .item:not(:last-child) {
+  margin-right: 10px;
 }
 
 /* sait-nav */
@@ -152,7 +166,7 @@ a {
   margin-left: auto;
 }
 .auth-nav .link {
-  color: var(--primaty-link-color);
+  color: var(--primaty-text-color);
 
   font-weight: 500;
   font-size: 14px;
@@ -236,7 +250,6 @@ a {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-
 }
 
 /* H2 */
@@ -280,12 +293,10 @@ a {
 
 .ourteam .list {
   display: flex;
-  flex-wrap: wrap;
-
 }
 
 .ourteam .item {
-  background-color: var( --primary-background-color);
+  background-color: var(--primary-background-color);
 }
 
 .ourteam-container .item:not(:last-child) {
@@ -294,9 +305,9 @@ a {
 
 .ourteam-content {
   padding-top: 30px;
-  padding-right: 60px;
   padding-bottom: 30px;
-  padding-left: 60px;
+  padding-right: 32px;
+  padding-left: 32px;
 }
 
 .ourteam-title-padding {
@@ -316,6 +327,20 @@ a {
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+}
+
+/* Постоянные клиенты */
+.clients-list {
+  display: flex;
+}
+
+.clients-list .item {
+  border: 1px solid var(--prime-border-color);
+  border-radius: 4px;
+}
+
+.clients-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Галерея Портфолио */
@@ -401,7 +426,7 @@ a {
 .gallery .text {
   font-size: 16px;
   line-height: 1.87;
-  color: var( --primaty-text-color);
+  color: var(--primaty-text-color);
 }
 
 /*Футер*/
@@ -415,24 +440,23 @@ a {
   font-weight: 700;
 }
 
-.first-container-footer {
-  min-width: 232px;
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-address {
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71px;
 }
 
 .footer .logo {
   margin-bottom: 20px;
-} 
+}
 
 .first-container-footer .item:not(:last-child) {
   margin-bottom: 9px;
-} 
+}
 
 .address-link {
   color: var(--footer-secondary-text-colo);
@@ -440,4 +464,23 @@ a {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
+}
+
+.first-container-footer {
+  margin-right: 70px;
+}
+
+.secondary-container-footer {
+  margin-right: auto;
+}
+
+.secondary-container-footer .text {
+  margin-top: 12px;
+  margin-bottom: 20px;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
