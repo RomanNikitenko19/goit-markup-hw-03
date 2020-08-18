@@ -191,6 +191,7 @@ img {
 }
 
 .hero-title {
+  margin-top: 0;
   margin-bottom: 30px;
   color: var(--secondary-title-color);
 
@@ -229,6 +230,10 @@ img {
 }
 
 /* Наши плюсы */
+.weprossection {
+  padding-bottom: 0;
+}
+
 .container .benefits {
   display: flex;
   flex-wrap: wrap;
